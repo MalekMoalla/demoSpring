@@ -1,12 +1,23 @@
 package tn.esprit.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Universite {
     @Id
-    Long idUniv;
-    String nomUniv;
+            @GeneratedValue (strategy = GenerationType.IDENTITY)
+    Long idUniversite;
+    String nomUniversite;
     String adresse;
+    @OneToOne
+    Foyer foyer;
+
 }
