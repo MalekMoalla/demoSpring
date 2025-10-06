@@ -11,8 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Chambre {
     @Id
             @GeneratedValue (strategy = jakarta.persistence.GenerationType.IDENTITY)

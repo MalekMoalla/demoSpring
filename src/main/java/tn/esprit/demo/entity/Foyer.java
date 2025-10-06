@@ -10,14 +10,13 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Foyer {
     @Id
             @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long idFoyer;
-    String nomFoyer;
-    long capaciteFoyer;
+    private String nomFoyer;
+    private long capaciteFoyer;
     //mappedBy l'attribut le plus faible dans la classe la plus faible
     @OneToOne (mappedBy = "foyer")
     Universite universite;

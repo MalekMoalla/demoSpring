@@ -11,15 +11,15 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Bloc {
     @Id
-            @GeneratedValue (strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @GeneratedValue (strategy = jakarta.persistence.GenerationType.IDENTITY)
     Long idBloc;
-    String nomBloc;
-    long capaciteBloc;
+    private String nomBloc;
+    private long capaciteBloc;
     //mappedBy l'attribut le plus faible dans la classe la plus faible
+
     @ManyToOne
     Foyer foyer;
     @OneToMany (mappedBy = "bloc")
